@@ -5,6 +5,7 @@
   "dependencies": {
     "base-64": "^0.1.0",
     "immutable": "^4.0.0-rc.12",
+    "md5": "^2.3.0",
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -16,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test  --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -28,5 +29,9 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "https://app.qudini.com"
+  "proxy": "https://app.qudini.com",
+  "devDependencies": {
+    "@testing-library/react": "^12.0.0",
+    "jest-environment-jsdom-sixteen": "^2.0.0"
+  }
 }

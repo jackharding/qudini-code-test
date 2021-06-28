@@ -6,7 +6,7 @@ import store from './state';
 import Container from './components/Container';
 import Logo from './components/Logo';
 import Navigation from './components/Navigation';
-import QueueScreen from './Queue/QueueScreen';
+import QueueScreen from './Queue';
 import './index.css';
 import logo from './logo.svg';
 import Content from './components/Content';
@@ -18,7 +18,7 @@ const App = () =>
                 <Logo src={logo} />
             </Navigation>
             <Content>
-            <QueueScreen />
+                <QueueScreen />
             </Content>
         </Container>
     </Provider>;
