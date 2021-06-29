@@ -5,11 +5,11 @@ import ProfilePicture from './ProfilePicture';
 import Name from './Name';
 import Content from './Content';
 
-const Customer = ({ name, hashedEmail, expectedTime }) => {
+const Customer = ({ name, picture, expectedTime }) => {
     return(
         <CustomerCard data-testid="customer-card">
             <ProfilePicture>
-                { hashedEmail && <img src={`https://www.gravatar.com/avatar/${hashedEmail}`} alt={`Avatar of ${name}`} /> }
+                <img src={picture} alt={`Avatar of ${name}`} />
             </ProfilePicture>
             <Content>
                 <Name>{ name }</Name>

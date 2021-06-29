@@ -10,11 +10,13 @@ export const fetchCustomers = (isRefetch) => {
 
 		try {
 			// TODO: Fix API call
-			const customers = mockedData.map(cust => ({
-				...cust,
-				hashedEmail: md5(cust.email),
-				expectedTime: new Date(cust.expectedTime).toLocaleString(),
-			}));
+			const customers = mockedData.map(cust => {
+				return {
+					...cust,
+					expectedTime: new Date(cust.expectedTime).toLocaleString(),
+					picture: `https://www.gravatar.com/avatar/${md5(cust.email || '')}`,
+				}
+			});
 			// const headers = new Headers();
 			// headers.set('Authorization', 'Basic Y29kZXRlc3QxOmNvZGV0ZXN0MTAw');;
 			// fetch('https://app.qudini.com/api/queue/gj9fs', {

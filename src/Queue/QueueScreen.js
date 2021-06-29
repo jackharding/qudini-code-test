@@ -47,7 +47,7 @@ const QueueScreen = ({
                         <Customer
                             key={cust.email}
                             name={cust.name}
-                            hashedEmail={cust.hashedEmail}
+                            picture={cust.picture}
                             expectedTime={cust.expectedTime}
                         />
                     )) }
